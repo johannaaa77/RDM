@@ -16,13 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
 //     // Manejar el error
 //   });
 
-  fetch('https://apirecetas.iacst.space/recetas/25', {
+  fetch('https://apirecetas.iacst.space/recetas/', {
     headers: {
       'Access-Control-Allow-Origin': '*'
     }
   })
   .then(response => response.json())
   .then(data => {
+    
       const rowDiv = document.createElement('div');
       rowDiv.classList.add('row', 'd-flex', 'justify-content-center', 'grid');
         for (let i = 0; i < data.data.length; i++) {
